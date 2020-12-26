@@ -1,0 +1,103 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: sans-serif;
+	font-weight: 800;
+	transition: all .3s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+.calc {
+	width: 350px;
+	margin: 0 15px;
+	background: rgba(255,2552,255,.1);
+	border: 1px solid #fff;
+}
+.calc__header {
+	display: flex;
+}
+.grid {
+	display: grid;	
+	grid-template-columns: repeat(4,1fr);
+	gap: 5px;
+}
+
+.zero {
+	grid-column: 1/3;
+	grid-row: 7;
+}
+
+.equal {
+	grid-column: 4/-1;
+	grid-row: 8/6;
+}
+
+.remove {
+	grid-column: 1/3;
+	grid-row: 2;
+}
+.delete {
+	grid-column: 3/-1;
+	grid-row: 2;
+}
+
+.input {
+	grid-column: 1/-1;
+}
+
+.calc__out {
+	max-width: 300px;
+	min-width: 100px;
+	margin-bottom: 5px;
+}
+.glass {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgba(255,255,255,.5);
+	backdrop-filter: blur(5px);
+	color: #000;
+	border: 1px solid #fff;
+	padding: 8px 5px;
+}
+
+.calc__input {
+	text-align: right;
+	margin-bottom: 5px;
+	width: 100%;
+	outline: 0;
+	height: 50px;
+	font-size: 40px;
+}
+.calc__input:focus {
+	display: block;
+	box-shadow: inset 0 0 10px 10px rgba(255,255,255,.9);
+}
+.grid__item {
+	transition: all .3s;
+	cursor: pointer;
+	font-size: 30px;
+	user-select: none;
+}
+.grid__item:hover {
+	background: rgba(255,255,255,.666);
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+  transition: all .3s
+}
